@@ -1,5 +1,9 @@
 # Pololu Zumo Shield Arduino library
 
+
+## This for contains fixes to make the Library usable on the Arduino Uno WiFi Rev2
+* Currently the Buzzer isn't working (replaced by dummy functions)
+
 Version: 2.0.0 <br>
 Release date: 2018-03-15 <br>
 [![Build Status](https://travis-ci.org/pololu/zumo-shield-arduino-library.svg?branch=master)](https://travis-ci.org/pololu/zumo-shield-arduino-library) <br>
