@@ -167,7 +167,7 @@ byte L3G::readReg(byte reg)
   Wire.beginTransmission(address);
   Wire.write(reg);
   last_status = Wire.endTransmission();
-  Wire.requestFrom(address, (byte)1);
+  Wire.requestFrom(address, 1);
   value = Wire.read();
   Wire.endTransmission();
 
@@ -182,7 +182,7 @@ void L3G::read()
   // to do slave-transmit subaddress updating.
   Wire.write(OUT_X_L | (1 << 7));
   Wire.endTransmission();
-  Wire.requestFrom(address, (byte)6);
+  Wire.requestFrom(address, 6);
   
   unsigned int millis_start = millis();
   while (Wire.available() < 6)
@@ -226,7 +226,7 @@ int L3G::testReg(byte address, regAddr reg)
     return TEST_REG_ERROR;
   }
 
-  Wire.requestFrom(address, (byte)1);
+  Wire.requestFrom(address, 1);
   if (Wire.available())
   {
     return Wire.read();
